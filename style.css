@@ -1,0 +1,238 @@
+/* Gaya halaman */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://api.duniagames.co.id/api/content/upload/file/12970379381628244239.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  color: #fff; /* Ganti warna teks menjadi putih */
+}
+
+/* Gaya header */
+header {
+  background-image: url('GAMBAR_URL');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Gaya navigasi */
+nav {
+  background-color: transparent; /* Warna latar belakang */
+  text-align: right; /* Pindahkan teks ke kanan */
+  padding: 10px;
+  border-top: none; /* Hapus garis bingkai atas */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  float: right; /* Pindahkan ke kanan */
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+/* Gaya teks kotak */
+nav ul li a {
+  text-decoration: none;
+  color: #FFFF00;
+  font-size: 18px;
+  background-color: #FF0000; /* Warna latar belakang */
+  padding: 10px 20px; /* Padding atas dan bawah 10px, kiri dan kanan 20px */
+  border: 2px solid #000; /* Warna bingkai hitam */
+  border-radius: 5px; /* Sudut bulat */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Gaya halaman event */
+.event-content {
+  padding: 20px;
+  text-align: center;
+  max-width: 800px; /* Lebar maksimum konten */
+  margin: 0 auto; /* Pusatkan konten */
+  background-color: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
+  border-radius: 10px; /* Sudut bulat */
+}
+
+/* Gaya judul acara */
+.event-title {
+  color: #FF0000; /* Warna teks untuk judul acara */
+  font-size: 28px; /* Ukuran teks untuk judul acara */
+  margin-bottom: 20px; /* Jarak dari elemen sebelumnya */
+}
+
+/* Gaya deskripsi acara */
+.event-description {
+  font-size: 18px; /* Ukuran teks untuk deskripsi acara */
+  margin-bottom: 20px; /* Jarak dari elemen sebelumnya */
+}
+
+/* Gaya detail acara */
+.event-details {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-details li {
+  font-size: 16px; /* Ukuran teks untuk detail acara */
+  margin-bottom: 10px; /* Jarak antara item */
+}
+
+/* Gaya hadiah acara */
+.event-prizes {
+  font-size: 18px; /* Ukuran teks untuk daftar hadiah */
+  margin-bottom: 20px; /* Jarak dari elemen sebelumnya */
+}
+
+/* Gaya gambar acara */
+.event-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.event-images img {
+  border-radius: 10px; /* Sudut bulat gambar */
+  max-width: 150px; /* Lebar maksimum gambar */
+}
+
+/* Gaya footer */
+.event-footer {
+  background-color: transparent; /* Warna latar belakang footer */
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Gaya produk container */
+.produk-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* Jarak antara kotak-kotak produk */
+}
+
+/* Gaya produk */
+.produk {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produk img {
+  width: 150px;
+  height: 150px;
+}
+
+.produk:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.produk button {
+  background-color: #FF4500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.produk button:hover {
+  background-color: #FF6600;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://radarcirebon.disway.id/upload/3fca6f411896abde9f729c28bedc0390.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    /* Style your header */
+}
+
+.login-page {
+    padding: 40px; /* Sesuaikan padding sesuai kebutuhan */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    max-width: 400px; /* Sesuaikan lebar maksimum sesuai kebutuhan */
+    margin: 0 auto;
+}
+
+h2 {
+    color: #FF0000;
+    font-size: 36px; /* Sesuaikan ukuran teks sesuai kebutuhan */
+    margin: 0 0 20px;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+#facebook, #google, #monton, #tiktok {
+    font-size: 24px; /* Ukuran teks tombol sosial */
+    padding: 20px 40px; /* Padding tombol sosial */
+    border-radius: 20px; /* Sudut bulat tombol sosial */
+}
+
+.social-button {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 40px; /* Sesuaikan dengan ukuran tombol */
+    border-radius: 20px; /* Sesuaikan dengan sudut bulat yang diinginkan */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Tambahkan warna latar belakang sesuai dengan tombol */
+#facebook {
+    background: linear-gradient(90deg, #1877f2 0%, #1877f2 100%);
+}
+
+#google {
+    background: linear-gradient(90deg, #4285F4 0%, #4285F4 100%);
+}
+
+#monton {
+    background: linear-gradient(90deg, #ff9900 0%, #ff9900 100%);
+}
+
+#tiktok {
+    background: linear-gradient(100deg, #000000 0%, #000000 100%);
+}
+
+.social-button:hover {
+    background: linear-gradient(90deg, #3333cc 0%, #cc33cc 100%);
+}
